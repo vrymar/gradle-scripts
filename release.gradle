@@ -14,7 +14,7 @@ apply plugin: 'java'
 apply plugin: net.researchgate.release.ReleasePlugin
 
 task sourcesJar(type: Jar, dependsOn: classes) {
-    from sourceSets.master.allSource
+    from sourceSets.main.allSource
     getArchiveClassifier().set('sources')
 }
 
