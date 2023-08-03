@@ -9,8 +9,8 @@ buildscript {
 apply plugin: 'signing'
 
 signing {
-    def signingKey = project.findProperty('gpgPrivateKey')
-    def signingPassword = project.findProperty('gpgPassphrase')
+    def signingKey = project.findProperty('signingKey')
+    def signingPassword = project.findProperty('signingPassword')
     useInMemoryPgpKeys(signingKey, signingPassword)
     sign publishing.publications
 }
