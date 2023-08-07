@@ -55,6 +55,11 @@ def pomConfig = {
     }
 }
 
+release {
+    pushReleaseVersionBranch = 'main'
+}
+
+
 project.ext.githubUserName = project.hasProperty('githubUserName') ? githubUserName : ""
 project.ext.githubToken = project.hasProperty('githubToken') ? githubToken : ""
 project.ext.publishRepo = project.hasProperty('publishRepo') ? publishRepo : ""
