@@ -9,9 +9,8 @@ buildscript {
 apply plugin: 'signing'
 
 signing {
-    useGpgCmd()
-    def signingKey = findProperty('signingKey')
-    def signingPassword = findProperty('signingPassword')
-    useInMemoryPgpKeys(signingKey, signingPassword)
-    sign publishing.publications.mavenJava
+    if (!version.endsWith('SNAPSHOT')) {
+        useGpgCmd()
+        sign publishing.publications.release
+    }
 }
