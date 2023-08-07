@@ -37,8 +37,8 @@ def pomConfig = {
     packaging 'jar'
     licenses {
         license {
-            name "The Apache Software License, Version 2.0"
-            url "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            name "MIT License"
+            url "https://opensource.org/licenses/MIT"
             distribution "repo"
         }
     }
